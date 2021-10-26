@@ -1,0 +1,49 @@
+.imageBackground {
+  right: 0;
+  position: absolute;
+  background-color: rgb(36, 36, 36);
+  border-radius: 50px;
+  width: 100%;
+  filter: brightness(80%);
+  height: 100%;
+}
+.containerBackground {
+  position: relative;
+}
+@media screen and (max-width: 1321px) {
+  .imageBackground {
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 2500px) and (min-width: 1901px) {
+  .containerBackground {
+    height: calc((100vw - 36px) * 1.69);
+  }
+}
+@media screen and (max-width: 1900px) and (min-width: 1501px) {
+  .containerBackground {
+    height: calc((100vw - 36px) * 0.630);
+  }
+}
+@media screen and (max-width: 1500px) and (min-width: 1322px) {
+  .containerBackground {
+    height: calc((100vw - 36px) *  0.551);
+    border-radius: none;
+  }
+}
+@media screen and (max-width: 1321px) and (min-width: 877px) {
+  .containerBackground {
+    height: calc((100vw - 36px) * 0.907);
+  }
+}
+@media screen and (max-width: 876px) and (min-width: 711px) {
+  .containerBackground {
+    height: calc(100vw * 1.369);
+  }
+}
+@media screen and (max-width: 710px) {
+  .containerBackground {
+    height: calc(100vw * 1.69);
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+  --main-bg-color: rgb(255, 255, 255);
+
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --ulta-small: 1.69;
+  --small: 1.369;
+  --medium: 0.907;
+  --big: 0.63;
+  --large: 0.551;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

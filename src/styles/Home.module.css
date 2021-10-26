@@ -1,0 +1,174 @@
+.textComponent {
+  position: absolute;
+  padding: 0 60px;
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.primaryPosition {
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.bigText {
+  font-size: 70px;
+  font-weight: 950;
+  white-space: pre-line;
+  line-height: 70px;
+}
+.wideComponent {
+  padding: 60px;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.smallText {
+  font-size: 30px;
+}
+.secondaryPosition {
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.buyLink {
+  margin-top: 10px;
+  background-color: rgb(255, 249, 249);
+  color: rgb(148, 39, 39);
+  font-size: 25px;
+  padding: 17px 28px;
+  border-radius: 40px;
+}
+.flexBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  justify-content: center;
+  padding-bottom: 130px;
+  overflow: hidden;
+}
+.pizzaItem {
+  padding: 10px;
+  display: inline-block;
+  width: 400px;
+  padding: 25px;
+}
+
+.MenuDiv {
+  font-size: 50px;
+  padding-top: 40px;
+}
+.pizzaName {
+  display: block;
+  margin: 25px;
+}
+.ImagePizza {
+  max-width: 450px;
+  max-height: 450px;
+}
+.buttonMore {
+  position: absolute;
+  bottom: 20px;
+  font-size: 25px;
+  padding: 20px 25px;
+  color: white;
+  background-color: rgb(211, 65, 65);
+  border-radius: 35px;
+  border-style: none;
+}
+.spanOrder {
+  background-color: brown;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1321px) {
+  .wideComponent {
+    font-size: 26px;
+  }
+  .imageBackground {
+    border-radius: 0;
+  }
+  .bigText {
+    font-size: 60px;
+  }
+  .bigText:last-child {
+    font-size: 50px;
+  }
+  .smallText {
+    font-size: 25px;
+  }
+  .textComponent {
+    width: 100%;
+    padding: 0 0;
+  }
+  .wideComponent {
+    color: rgb(0, 0, 0);
+  }
+  .buyLink {
+    padding-top: 22px;
+    font-size: 25px;
+    padding: 12px 20px;
+    color: white;
+    background-color: rgb(211, 65, 65);
+    border-radius: 30px;
+  }
+  .buttonMore {
+    border-radius: 0;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(211, 65, 65);
+    border-style: none;
+  }
+  .flexBox {
+    background-color: rgb(255, 240, 104);
+    border-radius: 40px;
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .bigText {
+    font-size: 50px;
+  }
+  .bigText:last-child {
+    font-size: 35px;
+  }
+  .smallText {
+    font-size: 25px;
+  }
+  .flexBox {
+    background-color:  rgb(255, 240, 104);
+    border-radius: 20px;
+    margin: 30px;
+  }
+}
+@media screen and (min-width: 506px) {
+  .break {
+    display: none;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .breakBixTextFirst {
+    display: none;
+  }
+}
+@media screen and (max-width: 1320px) {
+  .breakBixTextSecond {
+    display: none;
+  }
+}
+@media screen and (max-width: 506px) {
+  .bigText {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .smallText {
+    font-size: 20px;
+  }
+}
