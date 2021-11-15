@@ -5,12 +5,7 @@ import userEvent from "@testing-library/user-event";
 import faker from "faker";
 import { server, rest } from "../server/server";
 import mockRouter from "../mock/router";
-jest.mock("next/router", () => ({
-  __esModule: true,
-  useRouter: jest.fn(() => mockRouter), 
-}));
-
-function setUpLogin() {
+function setUpLogin() { 
   render(<Register />);
   let username = screen.getByLabelText(/username/i);
   let Email = screen.getByLabelText(/email/i);

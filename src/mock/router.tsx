@@ -17,11 +17,7 @@ const mockRouter = {
   },
   isFallback: false,
 };
+const useRouter = jest.spyOn(require("next/router"), "useRouter");
+useRouter.mockReturnValue(mockRouter);
 
-jest.mock("next/router", () => ({
-  __esModule: true,
-  useRouter: jest.fn(() => mockRouter),
-}));
-
-
-export default mockRouter
+export default mockRouter;
