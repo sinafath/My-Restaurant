@@ -29,7 +29,7 @@ test("renders form and allows the user to log in", async () => {
 test("shows server error if the request fails", async () => {
   let testErrorMessage = "password or email is not correct";
   server.use(
-    rest.post("http://localhost/api/login", async (req, res, ctx) => {
+    rest.post("http://localhost/api/auth/login", async (req, res, ctx) => {
       return res(ctx.status(500), ctx.json({ message: testErrorMessage }));
     })
   );

@@ -1,10 +1,11 @@
 import {rest} from 'msw' 
 import faker from "faker";
+import { NEXT_URL } from '../config';
 const handlers = [
-  rest.post('http://localhost/api/login', async (req, res, ctx) => {
+  rest.post(`${NEXT_URL}/api/auth/login`, async (req, res, ctx) => {
       return res(ctx.status(200), ctx.json({ user: faker.userName }))
   }),
-  rest.post('http://localhost/api/register', async (req, res, ctx) => {
+  rest.post(`${NEXT_URL}/api/auth/register`, async (req, res, ctx) => {
     return res(ctx.status(200), ctx.json({ user: faker.userName }))
 }),
 ]

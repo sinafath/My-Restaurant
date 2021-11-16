@@ -1,7 +1,7 @@
 import type { FormEvent } from "react";
 import useFetch from "../shares/useFetch";
 import styles from "../styles/Login.module.css";
-import Picture from "../components/Picture";
+import {NEXT_URL} from "../config/index"
 type CustomFormEvent = FormEvent<HTMLFormElement> & {
   target: {
     elements: { password: HTMLInputElement; email: HTMLInputElement };
@@ -14,7 +14,7 @@ const Login = () => {
     const { password, email } = event.target.elements;
     postRequest(
       { password: password.value, email: email.value },
-      "./api/login"
+      `${NEXT_URL}/api/auth/login`
     );
     event.preventDefault();
   }

@@ -5,6 +5,7 @@ import userEvent from "@testing-library/user-event";
 import faker from "faker";
 import { server, rest } from "../server/server";
 import mockRouter from "../mock/router";
+import {API_URL} from "../config";
 function setUpLogin() { 
   render(<Register />);
   let username = screen.getByLabelText(/username/i);
@@ -34,7 +35,7 @@ test("renders form and allows the user to log in", async () => {
 test("shows server error if the request fails", async () => {
   let testErrorMessage = "password or email is not correct";
   server.use(
-    rest.post("http://localhost/api/register", async (req, res, ctx) => {
+    rest.post(`${API_URL}/api/auth/register`, async (req, res, ctx) => {
       return res(ctx.status(500), ctx.json({ message: testErrorMessage }));
     })
   );

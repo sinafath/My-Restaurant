@@ -1,4 +1,5 @@
 import type { FormEvent } from "react";
+import { NEXT_URL } from "../config";
 import useFetch from "../shares/useFetch";
 
 type CustomFormEvent = FormEvent<HTMLFormElement> & {
@@ -21,7 +22,7 @@ const Register = () => {
         email: email.value,
         username: username.value,
       },
-      "./api/register"
+      `${NEXT_URL}/api/auth/register`
     );
     event.preventDefault();
   }
