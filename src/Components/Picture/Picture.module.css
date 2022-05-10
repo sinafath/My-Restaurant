@@ -10,7 +10,21 @@
 .containerBackground {
   position: relative;
 }
+.textComponent {
+  position: absolute;
+  padding: 0 160px;
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 @media screen and (max-width: 1321px) {
+  .textComponent {
+    width: 100%;
+    padding: 0 5px;
+  }
   .imageBackground {
     border-radius: 0px;
   }

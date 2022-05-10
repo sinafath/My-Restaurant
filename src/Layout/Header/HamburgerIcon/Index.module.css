@@ -1,0 +1,20 @@
+.Hamburger {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    display: none;
+  }
+  .HamburgerFixed{
+    position: fixed !important;
+    right: 10px;
+    top: 12px;
+  }
+  
+  @media screen and (max-width: 1321px) {
+    .Hamburger {
+      position: absolute;
+      right: 8px;
+      top: 5px;
+      display: initial;
+    }
+  }

@@ -1,0 +1,21 @@
+.error{
+  font-size: 15px;
+  position: absolute;
+  bottom: 19px;
+  right:0;
+  left:0;
+  color:red
+}
+.label{
+  font-size: 17px;
+  color: rgb(115, 115, 255);
+  padding-top: 13px;
+}
+
+.input{
+  font-size:14px;
+  padding: 12px 17px;
+  margin: 10px;
+  border:solid rgb(253, 0, 0) 2px;
+  border-radius: 5px;
+}

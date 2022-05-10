@@ -21,3 +21,8 @@ const useRouter = jest.spyOn(require("next/router"), "useRouter");
 useRouter.mockReturnValue(mockRouter);
 
 export default mockRouter;
+const input = {
+  ...document.createElement("input"),
+  value: "name",
+  type: "text",
+};

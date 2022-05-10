@@ -1,0 +1,9 @@
+.submit {
+  font-size: 14px;
+  margin: 15px;
+  padding: 13px 20px;
+  background-color: rgb(101, 101, 255);
+  border: none;
+  border-radius: 20px;
+  color: white;
+}

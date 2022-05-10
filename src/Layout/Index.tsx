@@ -1,10 +1,8 @@
-import { memo } from "react";
 import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-import styles from "../styles/Layout.module.css";
-
+import Footer from "./Footer/Index";
+import styles from "./Index.module.css";
 import type { ReactNode } from "react";
+import Header from "./Header/Index";
 
 interface Props {
   children: ReactNode;
@@ -23,3 +21,4 @@ export default function Layout({ children, title }: Props) {
     </>
   );
 }
+export {Footer, Header}

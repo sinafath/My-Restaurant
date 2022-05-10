@@ -3,9 +3,10 @@ import { render, screen, waitFor } from "@testing-library/react";
 import Register from "../pages/register";
 import userEvent from "@testing-library/user-event";
 import faker from "faker";
-import { server, rest } from "../server/server";
+import { server, rest } from "../Server/server";
 import mockRouter from "../mock/router";
-import {API_URL} from "../config";
+import {API_URL} from "../Config";
+
 function setUpLogin() { 
   render(<Register />);
   let username = screen.getByLabelText(/username/i);

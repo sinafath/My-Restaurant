@@ -14,11 +14,17 @@
 @media screen and (max-width: 606px) {
   .footer{
     flex-direction: column;
-    padding: 5px;
     font-size: x-small;
-;
+    padding: 10px;
+    color:rgb(43, 43, 43);
+    border-bottom: 0px;
+    line-height: 15px;
+
   }
   .item{
-    margin: 5px;
+    margin: 7px;
+  }
+  .title{
+    color: rgb(211, 65, 65)
   }
 }

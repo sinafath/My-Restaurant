@@ -1,13 +1,12 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {API_URL} from '../../config'
+import {API_URL} from '../../Config'
 import cookie from "cookie"
 
 export default async (req: NextApiRequest, res:NextApiResponse) => {
     if (req.method === 'POST') {
         const { identifier, password } = req.body
-
-        const APiResponse = await fetch(`${API_URL}/auth/register`, {
+        const APiResponse = await fetch(`${API_URL}/api/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,11 +16,9 @@ export default async (req: NextApiRequest, res:NextApiResponse) => {
                 password,
             }),
         })
-
-        const data = await APiResponse.json()
-
         if (APiResponse.ok) {
             // Set Cookie
+            const data = await APiResponse.json()
             res.setHeader(
                 'Set-Cookie',
                 cookie.serialize('token', data.jwt, {
@@ -36,8 +33,8 @@ export default async (req: NextApiRequest, res:NextApiResponse) => {
             res.status(200).json({ user: data.user })
         } else {
             res
-                .status(data.statusCode)
-                .json({ message: data.errors.message })
+            .status(APiResponse.status)
+            .json({ message: APiResponse.statusText })
         }
     } else {
         res.setHeader('Allow', ['POST'])

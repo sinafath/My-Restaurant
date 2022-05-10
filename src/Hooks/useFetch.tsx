@@ -1,17 +1,20 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import { useBoolean } from "react-use";
+import useUser from "./useUer";
 
-export default function useFetch() {
+function useFetch(urlProp: string){
   const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useBoolean(false);
+  const [url] = useState(urlProp);
+  const { setUser } = useUser();
 
   useEffect(() => {
     router.prefetch("/dashboard");
   }, []);
 
-  async function postRequest(data: {}, url: string) {
+  async function postRequest(data: {}) {
     setLoading(true);
     setError("");
     const response = await fetch(url, {
@@ -19,13 +22,16 @@ export default function useFetch() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
+    const dataRes = await response.json();
     if (response.ok) {
       router.push("./dashboard");
     } else {
-      setError(await response.text());
+      setError(dataRes.message);
     }
     setLoading(false);
   }
 
-  return { loading, error, postRequest };
+  return { postRequest, setError, loading, error };
 }
+
+export default useFetch;
