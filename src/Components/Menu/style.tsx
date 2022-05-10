@@ -36,13 +36,14 @@ const ListWrapper = styled.div`
   justify-content: center;
   padding-bottom: 130px;
   overflow: hidden;
-  .flexBox {
+  @media screen and (max-width: 1100px) {
     background-color: rgb(255, 240, 104);
     margin: 30px;
     border: solid chocolate;
     border-radius: 18px;
   }
 `;
+
 const Title = styled.div`
   font-size: 50px;
   padding-top: 40px;
