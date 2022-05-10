@@ -27,7 +27,6 @@ function Register() {
         <Password title="confirm" />
         <Error message={error} />
         <Submit loading={loading} />
-
         <Link url="account/login"> login</Link>
       </Form>
     </Background>

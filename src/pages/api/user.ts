@@ -1,5 +1,5 @@
 import cookie from 'cookie'
-import { API_URL } from '../../Config/index'
+import { API_URL } from 'Config'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 export default async (req: NextApiRequest, res:NextApiResponse) => {

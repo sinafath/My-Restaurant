@@ -1,6 +1,6 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {API_URL} from '../../Config'
+import {API_URL} from 'Config'
 import cookie from "cookie"
 
 export default async (req: NextApiRequest, res:NextApiResponse) => {
