@@ -1,4 +1,4 @@
-import Layout from "Layout/Index";
+import Layout from "Layout";
 import PizzaList, { Button, ListWrapper, Title } from "../Components/Menu";
 import { useRouter } from "next/router";
 import useUser from "Hooks/useUer";

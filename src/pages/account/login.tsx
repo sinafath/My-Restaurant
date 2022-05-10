@@ -1,8 +1,9 @@
 import useFetch from "Hooks/useFetch";
-import { NEXT_URL } from "Config/index";
+import { NEXT_URL } from "Config";
 import { Email, Password } from "Components/Form/Input";
 import Form from "Components/Form";
 import { Error, Submit, Background } from "Components/Profile";
+import Link from "Components/Link";
 
 function Login() {
   const { postRequest, error, loading } = useFetch(
@@ -16,6 +17,7 @@ function Login() {
         <Password />
         <Error message={error} />
         <Submit loading={loading} />
+        <Link url="account/register"> register </Link>
       </Form>
     </Background>
   );

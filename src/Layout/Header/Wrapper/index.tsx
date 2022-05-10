@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import type { ReactNode } from "react";
-import styles from "./Index.module.css";
+import styles from "./index.module.css";
 import HeaderRoom from "react-headroom";
 
 let cx = classNames.bind(styles);

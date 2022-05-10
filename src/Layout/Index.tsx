@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Footer from "./Footer/Index";
-import styles from "./Index.module.css";
+import Footer from "./Footer";
+import styles from "./index.module.css";
 import type { ReactNode } from "react";
-import Header from "./Header/Index";
+import Header from "./Header";
 
 interface Props {
   children: ReactNode;

@@ -1,4 +1,4 @@
-import styles from "./Index.module.css";
+import styles from "./index.module.css";
 
 type Item = {
   title: string;

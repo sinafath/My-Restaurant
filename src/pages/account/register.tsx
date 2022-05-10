@@ -3,6 +3,7 @@ import useFetch from "Hooks/useFetch";
 import Input, { Email, Password } from "Components/Form/Input";
 import Form from "Components/Form";
 import { Error, Submit,Background } from "Components/Profile";
+import Link from "Components/Link";
 
 function Register() {
   const { postRequest, setError, error, loading } = useFetch(
@@ -26,6 +27,8 @@ function Register() {
         <Password title="confirm" />
         <Error message={error} />
         <Submit loading={loading} />
+
+        <Link url="account/login"> login</Link>
       </Form>
     </Background>
   );

@@ -1,5 +1,5 @@
 import styles from "Styles/Home.module.css";
-import Layout from "Layout/Index.js";
+import Layout from "Layout";
 import Picture from "Components/Picture";
 import Big from "Components/Text/Big";
 import Small from "Components/Text/Small";
