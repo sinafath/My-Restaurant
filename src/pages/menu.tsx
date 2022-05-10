@@ -3,7 +3,7 @@ import PizzaList, { Button, ListWrapper, Title } from "../Components/Menu";
 import { useRouter } from "next/router";
 import useUser from "Hooks/useUer";
 
-let pizzaList = [
+const pizzaList = [
   "Pepperoni Pizza",
   "Veggie Pizza",
   "Cheese Pizza",

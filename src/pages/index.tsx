@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 function Menu() {
   const router = useRouter();
-  let pizzaList = ["Cheese Pizza", "Veggie Pizza", "Pepperoni Pizza"];
+  const pizzaList = ["Cheese Pizza", "Veggie Pizza", "Pepperoni Pizza"];
   return (
     <>
       <Title>Menu</Title>
