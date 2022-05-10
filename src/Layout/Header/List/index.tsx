@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import Link from "../../../Components/Link";
 import useUser from "../../../Hooks/useUer";
-import styles from "./Index.module.css";
+import styles from "./index.module.css";
 
 interface DefaultLink extends Partial<Link> {
   children: string;
