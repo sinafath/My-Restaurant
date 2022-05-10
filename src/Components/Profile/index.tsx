@@ -1,3 +1,5 @@
+import Link from "Components/Link";
+import styled from "styled-components";
 import Background from "./Background";
 import styles from "./index.module.css";
 
@@ -16,4 +18,7 @@ const Submit = ({ loading }: Submit) => (
     Submit
   </button>
 );
-export { Error, Submit, Background };
+const StyledLink = styled(Link)`
+  color: blue
+`;
+export { Error, Submit, Background ,StyledLink};

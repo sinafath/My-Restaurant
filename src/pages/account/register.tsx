@@ -2,8 +2,7 @@ import { NEXT_URL } from "Config";
 import useFetch from "Hooks/useFetch";
 import Input, { Email, Password } from "Components/Form/Input";
 import Form from "Components/Form";
-import { Error, Submit,Background } from "Components/Profile";
-import Link from "Components/Link";
+import { Error, Submit,Background, StyledLink } from "Components/Profile";
 
 function Register() {
   const { postRequest, setError, error, loading } = useFetch(
@@ -27,7 +26,7 @@ function Register() {
         <Password title="confirm" />
         <Error message={error} />
         <Submit loading={loading} />
-        <Link url="account/login"> login</Link>
+        <StyledLink url="/login"> login</StyledLink>
       </Form>
     </Background>
   );
