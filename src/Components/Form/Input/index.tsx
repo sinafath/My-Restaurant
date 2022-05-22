@@ -31,9 +31,12 @@ function Input({ title, type, classNames }: Input) {
   );
 }
 
-const [Password, Email] = ["password", "Email"].map((type: string) =>
-  partialProps(Input, { title: type, type })
-);
+const CreateSamePropInput = (type: string)
+  => (props: Partial<Input>) =>
+    <Input type={type} title={type} {...props} />
+
+const Email = CreateSamePropInput("email")
+const Password = CreateSamePropInput("password")
 
 export { Password, Email };
 export default Input;
